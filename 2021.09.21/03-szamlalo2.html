@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang='hu'>
+<head>
+<meta charset='UTF-8'>
+<meta name='author' content='Kovács Attila'>
+<title>Számláló 2.</title>
+<style>
+    body{
+        counter-reset: h1-ct;
+    }
+
+    h1{
+        counter-reset: h2-ct;
+    }
+
+    h1::before{
+        counter-increment: h1-ct;
+        content: counter(h1-ct) ". ";
+    }
+
+    h2{
+        counter-reset: h3-ct;
+    }
+
+    h2::before{
+        counter-increment: h2-ct;
+        content: counter(h1-ct) ". " counter(h2-ct) ". ";
+    }
+    
+    h3::before{
+        counter-increment: h3-ct;
+        content: counter(h1-ct) ". " counter(h2-ct) ". " counter(h3-ct) ". ";
+    }
+
+</style>
+</head>
+<body>
+<h1>Első számú címsor</h1>
+<h2>Második számú címsor</h2>
+<h3>Harmadik számú címsor</h3>
+<h2>Második számú címsor</h2>
+<h3>Harmadik számú címsor</h3>
+<h3>Harmadik számú címsor</h3>
+<h1>Első számú címsor</h1>
+
+</body>
+</html>

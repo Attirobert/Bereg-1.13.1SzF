@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enabled - disabled kijelölők</title>
+    <meta name="Author" content='Kovács Attila'>
+    <style>
+        input[type="text"]:enabled {
+            background-color: green;
+        }
+
+        input[type="text"]:disabled {
+            background-color: red;
+        }
+        
+    </style>
+</head>
+<body>
+Engedélyezett: <input type="text" value="Engedélyezett"><br>
+Tiltott: disabled <input type="text" value="Tiltott" disabled><br>
+Engedélyezett: <input type="text" value="Engedélyezett"><br>
+</body>
+</html>

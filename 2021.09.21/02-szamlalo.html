@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang='hu'>
+<head>
+<meta charset='UTF-8'>
+<meta name='author' content='Kovács Attila'>
+<title>Számláló szelektor</title>
+<style>
+    body{
+        counter-reset: szamlalo;
+        counter-set: "10";
+    }
+
+    p::before{
+        content: "Bekezdés " counter(szamlalo) ". ";
+        counter-increment: szamlalo;
+    }
+</style>
+</head>
+<body>
+<p> bekezdés címe</p>
+<p> bekezdés címe</p>
+<p> bekezdés címe</p>
+<p> bekezdés címe</p>
+</body>
+</html>

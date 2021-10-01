@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang='hu'>
+<head>
+<meta charset='UTF-8'>
+<meta name='author' content='Kovács Attila'>
+<title>Táblázatok</title>
+</head>
+<body>
+<h2>Táblázatok</h2>
+<table border="1">
+    <colgroup>
+        <col style="background-color: aqua;">
+        <col span="2" style="background-color: blueviolet;">
+        <col style="background-color: green;">
+    </colgroup>
+    <tr>
+        <th>Sor fejlécek</th>
+        <th>1.oszlop</th>
+        <th>2.oszlop</th>
+        <th>3.oszlop</th>
+    </tr>
+    <tr>
+        <th>1. sor</th>
+        <td>1. sor 1. oszlop </td>
+        <td>1. sor 2. oszlop </td>
+        <td>1. sor 3. oszlop </td>
+    </tr>
+    <tr>
+        <th>2. sor</th>
+        <td>2. sor 1. oszlop </td>
+        <td>2. sor 2. oszlop </td>
+        <td rowspan="2">2. sor 3. oszlop </td>
+    </tr>
+    <tr>
+        <th>3. sor</th>
+        <td>3. sor 1. oszlop </td>
+        <td>3. sor 2. oszlop </td>
+        <!-- <td>3. sor 3. oszlop </td> -->
+    </tr>
+
+</table>
+</body>
+</html>
