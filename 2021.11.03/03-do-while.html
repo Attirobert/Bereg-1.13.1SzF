@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For ciklus</title>
+    <script>
+        function csillag(pformalisParameter){
+            let p = parseInt(pformalisParameter);
+
+            let x = "";
+            let i = 0;
+            let b = true;
+
+            do{
+                x += "*";
+                if (i < p) {
+                    i++;
+                }else{
+                    b = false;
+                }
+            }while (b)
+
+            alert(x);
+        }
+    </script>
+</head>
+<body>
+    <form name="urlap">
+        Szám:<br>
+        <input type="number" name="szam" id="szam" min="10" max="50"><br>
+        <input type="button" value="Csillagozz!" 
+            onclick="csillag(document.urlap.szam.value)">
+    </form>
+</body>
+</html>
