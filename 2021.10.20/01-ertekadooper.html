@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang='hu'>
+<head>
+<meta charset='UTF-8'>
+<meta name='author' content='Kovács Attila'>
+<title>Értékadó operátorok</title>
+<script>
+    function muvelet(szoveg, szam){
+        document.write(szoveg + szam + "<br>");
+    }
+</script>
+</head>
+<body>
+<script>
+    let a = 33;
+    let b = 10;
+    let c = " Teszt ";
+
+    document.write(`Kiinduló adatok: <br> a = ${a} 
+                                    <br> b = ${b} 
+                                    <br> c = ${c} 
+                                    <br><br>`);
+
+
+    let r = a;
+    r = b;
+    muvelet("a=b => a = ", r);
+
+   
+    r = a;
+    r += b;
+    muvelet("a+=b => a = ", r);
+
+    r = a;
+    r -= b;
+    muvelet("a-=b => a = ", r);
+    
+    r = a;
+    r *= b;
+    muvelet("a*=b => a = ", r);
+    
+    r = a;
+    r /= b;
+    muvelet("a/=b => a = ", r);
+    
+    r = a;
+    r %= b;
+    muvelet("a%=b => a = ", r);
+    
+    r = a;
+    r **= 2;
+    muvelet("a**=2 => a = ", r);
+
+    
+    r = a;
+    r =+ b;
+    muvelet("a=+b => a = ", r);
+</script>
+</body>
+</html>
