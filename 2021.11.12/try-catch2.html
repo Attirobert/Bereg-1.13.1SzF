@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Try-catch példa - saját hiba osztályok</title>
+
+    <script>
+        // Saját hiba objektumok készítése
+        badNameError = new Error("Felhasználó neve nem megfelelő!");
+        badNameError.name = "Rossz név";
+
+        noNameError = new Error("A felhasználó neve mező nem lehet üres!");
+
+        // Általános form validációs rész
+        function validateForm(){
+            // Név mező ellenőrzése
+            checkName(document.forms[0].username.value);
+
+            // Egyéb ellenőrzések
+
+        }
+        // Mező ellenőrzések
+        function checkName(uName){
+            try {
+                if (uName == "") throw noNameError;
+
+                if (uName != "János") throw badNameError;
+            } catch (e) {
+                alert(e.name);
+                alert(e.message);
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <form onsubmit="validateForm()">
+        Kérem a felhasználó nevét:
+        <input type="text" name="username" id="username"><br>
+        <input type="submit" name="submit" value="OK">
+    </form>
+    
+</body>
+</html>

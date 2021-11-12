@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>Hatvany</title>
+    </head>
+    <body>
+        <table id="table"></table>
+        <script>
+            var hatvany_ertek = 0;
+            var hatvany = 0;
+            var max = 10;
+            var table = document.getElementById("table");
+            var row;
+            var row_count = 0;
+            var cell;
+            var cell_count = 0;
+
+            for(let i = 0; i <= max; i++){
+                hatvany_ertek = Math.pow(2, hatvany);
+                row = table.insertRow(row_count);
+                cell = row.insertCell(cell_count++);
+                cell.innerHTML = "2^" + i + "\t";
+                cell = row.insertCell(cell_count++);
+                cell = row.insertCell(cell_count);
+                cell.innerHTML = "\t" + hatvany_ertek;
+                cell_count = 0;
+                row_count++;
+                hatvany++;
+            }
+        </script>
+    </body>
+</html>

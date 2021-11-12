@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Try-catch példa</title>
+    <script>
+        function checkAge(f){
+            try {
+                // Átalakítás egésszé
+                a = parseInt(f);
+
+                if (isNaN(a)) {
+                    throw "Nem számot adott meg";
+                } 
+
+                // Megnézzük, hogy az értéke a megengedett tartományban van-e
+                if (a > 99){
+                    throw RangeError;
+                }
+            } catch (e){ // elkap minden tovább küldött hibát
+                
+                alert(e);
+            }
+
+            // Ha nincs hiba, akkor ez fut le
+            document.write("Az ön kora: " + a);
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <label>Adja meg a korát:</label>
+        <input type="text" name="kor" onblur="checkAge(this.value)">
+    </form>
+</body>
+</html>
